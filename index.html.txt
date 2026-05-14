@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sillara Shop - Sri Lanka's Best Local Shops</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="/_sdk/data_sdk.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="h-full w-full">
+<div class="app-root gradient-bg" id="app">
+  <div id="toast-container"></div>
+  <nav class="sticky top-0 z-50 glass px-4 py-3 flex items-center justify-between">
+    <div class="flex items-center gap-2">
+      <div class="w-9 h-9 rounded-xl btn-primary flex items-center justify-center"><span class="text-lg">🛒</span></div>
+      <span id="nav-title" class="text-white font-bold text-lg">Sillara Shop</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <button onclick="setLang(currentLang==='en'?'si':'en')" class="glass text-white text-xs px-3 py-1.5 rounded-lg hover:bg-white/10 transition" id="lang-btn">සිංහල</button>
+      <button onclick="showHelp()" class="glass text-white text-xs px-3 py-1.5 rounded-lg hover:bg-white/10 transition">How to Register</button>
+      <button onclick="openAI()" class="glass text-white text-xs px-3 py-1.5 rounded-lg hover:bg-white/10 transition flex items-center gap-1"><span>🤖</span> AI</button>
+      <div id="user-menu" class="hidden"><button onclick="showMyShop()" class="btn-primary text-white text-xs px-3 py-1.5 rounded-lg flex items-center gap-1"><i data-lucide="store" style="width:14px;height:14px"></i> My Shop</button></div>
+      <button id="login-btn" onclick="showView('login')" class="btn-primary text-white text-xs px-3 py-1.5 rounded-lg">Login</button>
+    </div>
+  </nav>
+  <div class="flex gap-1 px-4 py-2 overflow-x-auto" id="tab-bar">
+    <button onclick="switchTab('home')" class="tab-btn tab-active text-xs px-4 py-2 rounded-xl font-medium whitespace-nowrap transition-all" data-tab="home">🏠 Home</button>
+    <button onclick="switchTab('near')" class="tab-btn glass text-white/70 text-xs px-4 py-2 rounded-xl font-medium whitespace-nowrap transition-all" data-tab="near">📍 Near Me</button>
+    <button onclick="switchTab('register')" class="tab-btn glass text-white/70 text-xs px-4 py-2 rounded-xl font-medium whitespace-nowrap transition-all" data-tab="register">📝 Register</button>
+  </div>
+  <div class="px-4 pb-20" id="views-container"></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

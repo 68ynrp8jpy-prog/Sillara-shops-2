@@ -1,0 +1,36 @@
+*{font-family:'Poppins',sans-serif;margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;width:100%;overflow:hidden}
+.app-root{height:100%;width:100%;overflow:auto;background:#0a0a1a}
+.fade-in{animation:fadeIn .4s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.slide-up{animation:slideUp .5s ease}
+@keyframes slideUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.pulse-glow{animation:pulseGlow 2s infinite}
+@keyframes pulseGlow{0%,100%{box-shadow:0 0 5px rgba(99,102,241,.3)}50%{box-shadow:0 0 20px rgba(99,102,241,.6)}}
+.card-hover{transition:all .3s ease}
+.card-hover:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(99,102,241,.2)}
+.gradient-bg{background:linear-gradient(135deg,#0a0a1a 0%,#1a1a3e 50%,#0a0a1a 100%)}
+.glass{background:rgba(255,255,255,.05);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.1)}
+.btn-primary{background:linear-gradient(135deg,#6366f1,#8b5cf6);transition:all .3s}
+.btn-primary:hover{transform:scale(1.02);box-shadow:0 4px 20px rgba(99,102,241,.4)}
+.input-style{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:#ffffff;border-radius:12px;padding:10px 14px;width:100%;transition:all .3s;font-weight:500}
+.input-style:focus{outline:none;border-color:#6366f1;box-shadow:0 0 0 3px rgba(99,102,241,.2)}
+.input-style::placeholder{color:rgba(255,255,255,.5)}
+select.input-style{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center}
+select.input-style option{background:#1a1a3e;color:#fff}
+.tab-active{background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff}
+.star-btn{cursor:pointer;transition:all .2s}
+.star-btn:hover{transform:scale(1.2)}
+.toast{position:fixed;top:20px;right:20px;z-index:9999;padding:12px 24px;border-radius:12px;color:#fff;font-weight:500;animation:slideIn .3s ease}
+@keyframes slideIn{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:translateX(0)}}
+.chat-bubble{max-width:80%;padding:10px 14px;border-radius:16px;margin:6px 0;font-size:14px;line-height:1.5}
+.chat-user{background:#6366f1;color:#fff;align-self:flex-end;border-bottom-right-radius:4px}
+.chat-bot{background:rgba(255,255,255,.1);color:#e2e8f0;align-self:flex-start;border-bottom-left-radius:4px}
+.shop-type-card{transition:all .3s;cursor:pointer}
+.shop-type-card:hover{transform:scale(1.05)}
+.shop-type-card.selected{border:2px solid #6366f1;box-shadow:0 0 20px rgba(99,102,241,.3)}
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:rgba(255,255,255,.2);border-radius:3px}
+.item-chip{display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:20px;font-size:12px;background:rgba(99,102,241,.2);color:#a5b4fc;margin:2px}
+.discount-badge{background:linear-gradient(135deg,#ef4444,#f97316);color:#fff;font-size:10px;padding:2px 8px;border-radius:10px;font-weight:600}
